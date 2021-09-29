@@ -2,6 +2,7 @@
 Lista de POO
 Tarefa:
 •Modelar as classes presentes no UML
+![image](https://user-images.githubusercontent.com/89805574/135192486-15255d63-47f3-4ac3-bce3-aa494689d1f1.png)
 
 •Testar as classes criando ao menos uma instância de Pessoa e alguns endereços. 
 
