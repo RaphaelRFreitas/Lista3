@@ -33,7 +33,7 @@ public class Pessoa {
             else {
                 System.out.print("\nEndereço "+ (i+1) + ": " +
                 enderecos[i].rua + "," +
-                enderecos[i].bairro + "," +
+                enderecos[i].bairro + ", nº" +
                 enderecos[i].num
                 );
             }
