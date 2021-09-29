@@ -17,4 +17,4 @@ Tarefa:
 
 •Quem desejar poderá usar interface gráfica (GUI) ou leitura apenas do teclado, com a classe Scanner
 
-obs o Tipo de CPF teve que ser long ao invés de int
+### obs. o Tipo de CPF teve que ser "long" ao invés de "int"
