@@ -1,15 +1,46 @@
 import ClassesBase.*;
 
+import java.util.Scanner;
+
 public class Principal {
     public static void main(String[] args) {
-        long cpf = Long.parseLong("13822882631");
-        Pessoa p1 = new Pessoa("Raphael", cpf,2);
-        Endereco e1 = new Endereco("Andre Fernands","Nova Suiça",100);
-        Endereco e2 = new Endereco("1 de abril","Centro",65);
+        Scanner sc = new Scanner(System.in);
+        int op = 100;
 
-        p1.addEndereco(e1);
-        p1.addEndereco(e2);
+        //Criar Pessoa
+        System.out.println("Vamos criar a pessoa");
+        System.out.print("Entre com nome da sua pessoa: ");
+        String nP = sc.nextLine();
+        System.out.print("Entre com o cpf: ");
+        long cpfP = sc.nextLong();
+        System.out.print("Quantos endereços ela tem?: ");
+        int neP = sc.nextInt();
+        Pessoa pessoa = new Pessoa(nP,cpfP,neP);
 
-        p1.mostraInfo();
+        while (op!=0) {
+            System.out.println("\n-------------------------------");
+            System.out.println("1- Adicionar endereço");
+            System.out.println("2- Mostrar Informações");
+            System.out.println("0- Sair");
+            System.out.print("Oq vc deseja: ");
+            op = sc.nextInt();
+            sc.nextLine();
+
+            if(op==1){
+                System.out.println("Vamos criar uma Endereço");
+                System.out.print("Entre com a rua: ");
+                String rua = sc.nextLine();
+                System.out.print("Entre com o bairro: ");
+                String bairro = sc.nextLine();
+                System.out.print("Entre com o numero: ");
+                int n = sc.nextInt();
+                sc.nextLine();
+                Endereco e1 = new Endereco(rua,bairro,n);
+                pessoa.addEndereco(e1);
+                System.out.println("Endereço adicionado com sucesso!!");
+            }
+            else if (op==2)
+                pessoa.mostraInfo();
+        }
     }
 }
