@@ -4,7 +4,7 @@ public class Pessoa {
     public String nome;
     public long cpf;
 
-    public Endereco enderecos[];
+    public Endereco[] enderecos;
 
     public Pessoa(String nome,long cpf,int qtdEnd){
         this.nome = nome;
